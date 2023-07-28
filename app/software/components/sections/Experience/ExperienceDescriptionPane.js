@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import { Close } from "../../../../images/SVGs";
 import Skills from "../Skills/Skills"
 import styles from "./Experience.module.scss"

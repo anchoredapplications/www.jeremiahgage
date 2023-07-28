@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import styles from './Section.module.scss'
 import FlipCard from '../../shared/components/FlipCard/FlipCard'
 import GitHubFooter from './GitHubFooter/GitHubFooter';

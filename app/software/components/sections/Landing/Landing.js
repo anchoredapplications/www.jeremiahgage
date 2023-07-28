@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import { useEffect } from 'react'
 import styles from './Landing.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import Skill from './Skill';
 import styles from './Skills.module.scss'
 

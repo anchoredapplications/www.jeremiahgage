@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import Skills from "../Skills/Skills"
 import styles from './Academia.module.scss'
 

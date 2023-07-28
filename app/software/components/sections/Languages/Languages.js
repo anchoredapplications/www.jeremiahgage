@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import LanguagesList from './LanguagesList';
 import Section from '../../Section';
 import styles from './LanguagesList.module.scss'

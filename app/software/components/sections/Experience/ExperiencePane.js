@@ -1,5 +1,5 @@
 
-'use client'
+"use client"
 import styles from "./Experience.module.scss"
 import {FormatDateTimeAsString, FormatDurationAsString} from '../../../system'
 

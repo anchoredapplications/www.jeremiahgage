@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import ExperiencePane from './ExperiencePane';
 import styles from "./Experience.module.scss"
 

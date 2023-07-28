@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import Section from '../../Section';
 import AcademiaDescriptionPane from './AcademiaDescriptionPane';
 import AcademiaImagePane from './AcademiaImagePane';

@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import { useState } from 'react';
 import styles from './CircleMeter.module.scss'
 import CircleMeterSVG from './CircleMeterSVG';

@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import styles from './Project.module.scss'
 import FlipCard from '../../../../shared/components/FlipCard/FlipCard.js'
 

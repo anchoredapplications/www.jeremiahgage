@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import { useRef, useState } from 'react';
 import Section from '../../Section';
 import styles from './Contact.module.scss'

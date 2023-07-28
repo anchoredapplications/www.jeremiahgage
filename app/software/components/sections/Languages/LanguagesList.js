@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import styles from './LanguagesList.module.scss'
 import CircleMeter from "../../../../shared/components/CircleMeter/CircleMeter"
 import { useEffect, useState } from 'react';

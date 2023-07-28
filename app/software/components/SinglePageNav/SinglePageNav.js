@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import styles from './SinglePageNav.module.scss'
  
 function SinglePageNav(props) {

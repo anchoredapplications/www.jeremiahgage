@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import ProjectsList from './ProjectsList';
 import Section from '../../Section';
 import styles from './Project.module.scss';
