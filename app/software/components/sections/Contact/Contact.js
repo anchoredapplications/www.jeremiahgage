@@ -34,9 +34,8 @@ export default function Contact(props) {
 
     const handleSubmit = async() => {
         setWasSubmit(true)
-        if (subjectIsValid && emailIsValid && messageIsValid || true) {
-            const recaptcha = 7 //await refReCaptcha.current.executeAsync()
-            console.log("here")
+        if (subjectIsValid && emailIsValid && messageIsValid) {
+            const recaptcha = await refReCaptcha.current.executeAsync()
             axios.post(`${process.env.NEXT_PUBLIC_LOCAL_API_HOSTNAME}${process.env.NEXT_PUBLIC_LOCAL_API_CONTACT}`, {email: payload, token: recaptcha})
             .then((response) => {
                 console.log(response)
