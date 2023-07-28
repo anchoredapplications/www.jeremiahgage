@@ -1,0 +1,116 @@
+.experiences {
+    display: flex;
+    padding-bottom: 20px;
+    gap: 2em;
+    padding: 3em;
+    @media (max-width: 700px) {
+        flex-direction: column;
+    }
+
+    .experienceModal {
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 15px;
+        background-color: #f2f2f2;
+    }
+
+    .experiencePane {
+        font-size: .9em;
+        padding: 10px; 
+        margin-bottom: 1em;
+
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19), inset 0 0 0 2px rgba(0, 0, 0, 0.8);
+        }
+    }
+
+    .experienceDescriptionPane {
+        flex: 1;
+        padding: 3em;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @media (max-width: 700px) {
+            position: absolute;
+            margin: 10px;
+            
+            left:0;
+            top: 0;
+        }
+    }
+
+    .closeButton {
+        width: 20px;
+        height: 20px;
+        right: 20px;
+        top: 20px;
+        position: fixed;
+        cursor: pointer;
+    }
+
+    .description {
+        width: 100%;
+        font-size: 1.1em;
+        li {
+            padding: 0.5em;
+        }
+    }
+
+    .experiencePaneList {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75em;
+    }
+
+    table {
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: 100%; 
+    } 
+
+    td:nth-of-type(odd) {
+        text-align: left;
+    }
+    td:nth-of-type(even) {
+        text-align: right;
+    }
+
+    .slider {
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+    }
+
+    .slideIn {
+        animation: slide-in 0.5s forwards;
+        -webkit-animation: slide-in 0.5s forwards;
+    }
+
+    .slideOut {
+        animation: slide-out 0.5s forwards;
+        -webkit-animation: slide-out 0.5s forwards;
+    }
+        
+    @keyframes slide-in {
+        100% { transform: translateX(0%); }
+    }
+
+    @-webkit-keyframes slide-in {
+        100% { -webkit-transform: translateX(0%); }
+    }
+        
+    @keyframes slide-out {
+        0% { transform: translateX(0%); }
+        100% { transform: translateX(-100%); }
+    }
+
+    @-webkit-keyframes slide-out {
+        0% { -webkit-transform: translateX(0%); }
+        100% { -webkit-transform: translateX(-100%); }
+    }
+
+}

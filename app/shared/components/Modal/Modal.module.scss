@@ -1,0 +1,21 @@
+.modal {
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+    padding: 5vh;
+    z-index: 2;
+}
+
+.closeBtn {
+    float: right;
+    width: 30px;
+    height: 30px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+p {
+    position: relative;
+    overflow-wrap: break-word;
+}

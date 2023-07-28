@@ -1,0 +1,102 @@
+.software {
+    text-align: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    h2, h3, h4, h5 {
+        margin: 0px;
+        padding: 0px;
+        color: black;
+    }
+    h3 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+    h4 {
+        font-weight: normal;
+        font-size: 20px;
+    }
+
+    li {
+        font-size: 20px;
+    }
+}
+
+.overview {
+    padding-left: 10%;
+    padding-top: 5%;
+}
+
+.photo {
+    padding-right: 10%;
+    padding-top: 5%;
+}
+
+/* Clear floats after the columns */
+.heading {
+    padding-top: .5em;
+}
+
+.front {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    .heading{
+        color:#04151a;
+    }
+    .content {
+        height: 100%;
+        padding-bottom: 3em;
+    }
+    a {
+        background: linear-gradient(to right, #ffbb00 0%, #dd4c4f 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+}
+
+.wrapper{
+    font-size: 1.5em;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.back {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #04151a;
+    background-image: url("../../images/Circuit.svg");
+    background-size: cover;
+    color: white;
+    flex: 1;
+    .heading{
+        color:white;
+    }
+    .content {
+        text-align: left;
+    }
+    a {
+        background: linear-gradient(to right, #00bfff 0%, #1100ff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    @media (min-width: 700px) {
+        .content{
+            padding: 30px;
+            display: flex;
+            width: 100%;
+            .wrapper{
+                min-width: 50%;
+            }
+        }
+    }
+
+}

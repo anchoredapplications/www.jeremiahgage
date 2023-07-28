@@ -1,0 +1,29 @@
+.about {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 15%;
+    padding-top: 6em;
+    
+    .a {
+        font-size: 72px;
+        background: -webkit-linear-gradient(#ff0000, #fffb00);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    p {
+        flex: 1;
+        margin: 0;
+        font-size: 1.5em;
+        @media (max-width: 700px) {
+            font-size: 18px;
+        }
+    }
+    
+    h3 {
+        font-weight: 10;
+    }
+}

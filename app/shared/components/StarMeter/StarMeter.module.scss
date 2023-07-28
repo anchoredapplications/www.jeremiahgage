@@ -1,0 +1,30 @@
+.starMeter {
+    width: 25vh;
+    height: 5vh;
+}
+
+.fill {
+    background-color: yellow;
+    height: 5vh;
+    width: 25vh;
+    position: relative;
+    z-index: 1;
+}
+
+.overlay__wrapper {
+    height: 5vh;
+    width: 25vh;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    top: -5vh;
+}
+
+.overlay {
+    width: 25vh;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    top: -12px;
+    left: -1px;
+}

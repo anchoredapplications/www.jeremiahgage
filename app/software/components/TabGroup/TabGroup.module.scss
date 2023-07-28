@@ -1,0 +1,16 @@
+.tabGroup {
+    pointer-events: none;
+}
+
+.tab {
+    display: none;
+    pointer-events: none;
+
+    &.active {
+        display: block;
+    }
+}
+
+.links {
+    pointer-events: all;
+}
