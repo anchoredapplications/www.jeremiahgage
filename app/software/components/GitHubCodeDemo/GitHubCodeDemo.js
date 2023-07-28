@@ -1,4 +1,4 @@
-"use client"
+'use client'
 import { useEffect, useState } from 'react'
 import { Octokit } from "octokit";
 import axios, { CancelToken } from "axios";
@@ -17,7 +17,8 @@ function GitHubCodeDemo(props) {
             try {
                let documents = await axios.post(`${process.env.NEXT_PUBLIC_LOCAL_API_HOSTNAME}${process.env.NEXT_PUBLIC_LOCAL_API_DOCUMENTS}`, { path: props.path})
                setDocuments(documents.data.value)
-               document.dispatchEvent(DataLoadedEvent);
+               globalThis.document.dispatchEvent(DataLoadedEvent);
+
             } catch (err) {
                 if (axios.isCancel(err)) {
                     return console.info(err);
@@ -34,7 +35,7 @@ function GitHubCodeDemo(props) {
             "Cancelling previous http call because a new one was made ;-)"
           );
         };
-    }, []);
+    }, [props.path]);
     
     return (
         <div className={styles.gitHubCodeDemo}>
@@ -48,7 +49,7 @@ function GitHubCodeDemo(props) {
                                 className={[styles.tab, isActive ? styles.active : ""].join(" ")}>            
                                 <textarea 
                                     readOnly 
-                                    value={""}
+                                    value={el.document}
                                     onClick={(event) => {event.stopPropagation()}}            
                                 ></textarea>
                             </div>)
