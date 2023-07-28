@@ -46,7 +46,7 @@ function SinglePageNav(props) {
 }
 
 function navHighlighter() {
-    const sections = if (document) document.querySelectorAll("section[id]");
+    const sections =  (document) ? document.querySelectorAll("section[id]") : [];
     let scrollY = globalThis.window.pageYOffset;
   
     sections.forEach(current => {
@@ -55,7 +55,7 @@ function navHighlighter() {
         const sectionTop = current.getBoundingClientRect().top + globalThis.window.pageYOffset - 150;
         var sectionId = current.getAttribute("id");
         
-        var el = if (document) document.querySelector(".navigation a[href*=" + sectionId + "]")
+        var el = (document) ? document.querySelector(".navigation a[href*=" + sectionId + "]") : []
         if (
             scrollY > sectionTop &&
             scrollY <= sectionTop + sectionHeight
@@ -68,7 +68,7 @@ function navHighlighter() {
 }
 
 function alignFrontAndBackOfCards() {
-    var sections = if (document) document.querySelectorAll("section");
+    var sections = (document) ? document.querySelectorAll("section") : [];
     const sectionArr = []
     sections.forEach(section => {
         section.setAttribute("style", ``)
