@@ -2,12 +2,14 @@
 import styles from './SinglePageNav.module.scss'
  
 function SinglePageNav(props) {
-    if (window) window.addEventListener('resize', () => {
-        alignFrontAndBackOfCards();
-    }, true);
-    if (document) document.addEventListener("data-loaded", function(e) {
-        alignFrontAndBackOfCards();
-    });
+    useEffect(() => {
+        window.addEventListener('resize', () => {
+            alignFrontAndBackOfCards();
+        }, true);
+        document.addEventListener("data-loaded", function(e) {
+            alignFrontAndBackOfCards();
+        });
+    }, [])
       
     return (
         <>

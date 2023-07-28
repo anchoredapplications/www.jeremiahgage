@@ -37,8 +37,7 @@ function Experience(props) {
             try {
                let experiences = await axios.get(`${process.env.NEXT_PUBLIC_LOCAL_API_HOSTNAME}${process.env.NEXT_PUBLIC_LOCAL_API_EXPERIENCES}`)
                setExperiences(experiences.data)
-               if (document) document.dispatchEvent(DataLoadedEvent);
-
+               document.dispatchEvent(DataLoadedEvent);
             } catch (err) {
                 if (axios.isCancel(err)) {
                     return console.info(err);
