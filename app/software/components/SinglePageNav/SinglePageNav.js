@@ -3,8 +3,8 @@ import styles from './SinglePageNav.module.scss'
  
 function SinglePageNav(props) {
     useEffect(() => {
+        var sections = document.querySelectorAll("section");
         function alignFrontAndBackOfCards() {
-            var sections = (document) ? document.querySelectorAll("section") : [];
             const sectionArr = []
             sections.forEach(section => {
                 section.setAttribute("style", ``)

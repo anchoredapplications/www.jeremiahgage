@@ -39,8 +39,7 @@ function ProjectsList(props) {
             try {
                 let projects = await axios.get(`${process.env.NEXT_PUBLIC_LOCAL_API_HOSTNAME}${process.env.NEXT_PUBLIC_LOCAL_API_PROJECTS}`).catch()
                 setProjects(projects.data.value)
-                document.dispatchEvent(DataLoadedEvent);
-
+                //document.dispatchEvent(DataLoadedEvent);
             } catch (err) {
                 if (axios.isCancel(err)) {
                     return console.info(err);
