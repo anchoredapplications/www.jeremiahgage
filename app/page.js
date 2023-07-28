@@ -5,6 +5,10 @@ import Section from './software/App';
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 
 require('dotenv').config()
+if (!document) {
+    const document = ""
+}
+
 
 export default function Home() {
   return (
