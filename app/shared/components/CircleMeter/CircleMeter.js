@@ -25,7 +25,7 @@ function CircleMeter(props) {
                     </div>
                 </div>
             </div>
-            <CircleMeterSVG className={styles.svg} cx={isMobile ? "60" : "80"} cy={isMobile ? "60" : "80"} r="70" fill="none" stroke="url(#GradientColor)" strokeWidth="20px" strokeDasharray={440} strokeDashoffset={440 - 440*props.value}/>
+            <CircleMeterSVG className={styles.svg} cx={isMobile ? "60" : "80"} cy={isMobile ? "60" : "80"} r={isMobile ? "50" : "70"} fill="none" stroke="url(#GradientColor)" strokeWidth="20px" strokeDasharray={440} strokeDashoffset={440 - 440*props.value}/>
         </div>
 
     );
