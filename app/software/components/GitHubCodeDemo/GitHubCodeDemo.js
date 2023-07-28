@@ -48,7 +48,7 @@ function GitHubCodeDemo(props) {
                                 className={[styles.tab, isActive ? styles.active : ""].join(" ")}>            
                                 <textarea 
                                     readOnly 
-                                    value={el.document ?? ""}
+                                    value={""}
                                     onClick={(event) => {event.stopPropagation()}}            
                                 ></textarea>
                             </div>)
