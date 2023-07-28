@@ -17,7 +17,7 @@ function GitHubCodeDemo(props) {
             try {
                let documents = await axios.post(`${process.env.NEXT_PUBLIC_LOCAL_API_HOSTNAME}${process.env.NEXT_PUBLIC_LOCAL_API_DOCUMENTS}`, { path: props.path})
                setDocuments(documents.data.value)
-               globalThis.document.dispatchEvent(DataLoadedEvent);
+               if (document) document.dispatchEvent(DataLoadedEvent);
 
             } catch (err) {
                 if (axios.isCancel(err)) {

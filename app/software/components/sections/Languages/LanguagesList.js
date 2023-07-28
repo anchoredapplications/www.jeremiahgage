@@ -15,7 +15,7 @@ export default function LanguagesList(props) {
             try {
                let languages = await axios.get(`${process.env.NEXT_PUBLIC_LOCAL_API_HOSTNAME}${process.env.NEXT_PUBLIC_LOCAL_API_LANGUAGES}`)
                setLanguages(languages.data.value)
-               globalThis.document.dispatchEvent(DataLoadedEvent);
+               if (document) document.dispatchEvent(DataLoadedEvent);
             } catch (err) {
                 if (axios.isCancel(err)) {
                     return console.info(err);
