@@ -11,24 +11,6 @@ function SinglePageNav(props) {
       
     return (
         <>
-            {/* <div className={styles.sideBar}>
-                <nav className={["navigation", styles.navigation, (dropDownIsActive ? styles.isOpen : "")].join(" ")} tabIndex={1}  onClick={() => {setDropDownIsActive(val => !val)}}>
-                    <div className={styles.dropdownButton}>    
-                        <svg viewBox="0 0 100 80" width="20" height="30">
-                            <rect y="15" width="100" height="15"></rect>
-                            <rect y="45" width="100" height="15"></rect>
-                            <rect y="75" width="100" height="15"></rect>
-                        </svg>
-                    </div>
-                    <ul className={styles.dropdownContent}>
-                        {props.children.map((item, index)=>{
-                            return <li key={index}>
-                                <a href={`#${item.props.header}`}>{item.props.header}</a>
-                            </li>
-                        })}
-                    </ul>
-                </nav>
-            </div> */}
             <div className={styles.mainContent}>
             {props.children.map((item, index)=>{
                 return <section key={index} id={item.props.header}>
@@ -41,28 +23,6 @@ function SinglePageNav(props) {
             </div>
         </>
     );
-}
-
-function navHighlighter() {
-    const sections =  (document) ? document.querySelectorAll("section[id]") : [];
-    let scrollY = (window) ? window.pageYOffset : 0;
-  
-    sections.forEach(current => {
-        const sectionHeight = current.parentElement.offsetHeight;
-    
-        const sectionTop = current.getBoundingClientRect().top + (window) ? window.pageYOffset - 150 : 0;
-        var sectionId = current.getAttribute("id");
-        
-        var el = (document) ? document.querySelector(".navigation a[href*=" + sectionId + "]") : []
-        if (
-            scrollY > sectionTop &&
-            scrollY <= sectionTop + sectionHeight
-        ){
-            el.className = styles.active
-        } else {
-            el.className = ""
-        }
-    });
 }
 
 function alignFrontAndBackOfCards() {
