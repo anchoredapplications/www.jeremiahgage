@@ -2,9 +2,7 @@
 import styles from './SinglePageNav.module.scss'
  
 function SinglePageNav(props) {
-    // window.addEventListener("scroll", navHighlighter);
-    // const [dropDownIsActive, setDropDownIsActive] = useState(false)
-    globalThis.window.addEventListener('resize', () => {
+    if (window) window.addEventListener('resize', () => {
         alignFrontAndBackOfCards();
     }, true);
     if (document) document.addEventListener("data-loaded", function(e) {
@@ -47,12 +45,12 @@ function SinglePageNav(props) {
 
 function navHighlighter() {
     const sections =  (document) ? document.querySelectorAll("section[id]") : [];
-    let scrollY = globalThis.window.pageYOffset;
+    let scrollY = (window) ? window.pageYOffset : 0;
   
     sections.forEach(current => {
         const sectionHeight = current.parentElement.offsetHeight;
     
-        const sectionTop = current.getBoundingClientRect().top + globalThis.window.pageYOffset - 150;
+        const sectionTop = current.getBoundingClientRect().top + (window) ? window.pageYOffset - 150 : 0;
         var sectionId = current.getAttribute("id");
         
         var el = (document) ? document.querySelector(".navigation a[href*=" + sectionId + "]") : []

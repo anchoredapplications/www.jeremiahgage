@@ -4,9 +4,9 @@ import styles from './CircleMeter.module.scss'
 import CircleMeterSVG from './CircleMeterSVG';
 
 function CircleMeter(props) {
-    var [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 700px)").matches)
+    var [isMobile, setIsMobile] = useState(globalThis.window.matchMedia("(max-width: 700px)").matches)
 
-    window.addEventListener('resize', () => {
+    if (window) window.addEventListener('resize', () => {
         setIsMobile(window.matchMedia("(max-width: 700px)").matches);
     }, true);
 

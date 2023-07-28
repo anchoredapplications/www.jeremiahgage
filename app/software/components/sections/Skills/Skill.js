@@ -5,7 +5,7 @@ import styles from './Skills.module.scss'
 export default function Skill(props) {
     const openLink = (e) => {
         e.stopPropagation(); 
-        if (props.link) window.open(props.link)
+        if (props.link && window) window.open(props.link)
     }
     return (
         <div className={styles.skill} title={props.link ?? props.tooltip ?? props.subtitle} onClick={openLink}>
