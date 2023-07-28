@@ -62,7 +62,7 @@ async function LoadGitHubDocumentsByDocument(documentPath) {
     const documents = []
     for (let file of response.data) {
         const document = await octokit.request(file.url);
-        documents.push({title: file.name, document: Buffer.from("await document.data.content", 'base64').toString('ascii')});
+        documents.push({title: file.name, document: Buffer.from(await document.data.content, 'base64').toString('ascii')});
     }
 
     GITHUB_DOCUMENTS.value.push({ key: documentPath, value: documents})
