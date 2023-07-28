@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react';
 import styles from './CircleMeter.module.scss'
-import CircleMeterSVG from './CircleMeterSvg';
+import CircleMeterSVG from './CircleMeterSVG';
 
 function CircleMeter(props) {
     var [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 700px)").matches)
