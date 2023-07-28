@@ -16,6 +16,6 @@ function FormatDurationAsString(start, end) {
     return `${yearsString ?? ""}${yearsString && monthsString ? ", " : ""}${monthsString ?? ""}`
 }
 
-const DataLoadedEvent = (globalThis.window) ? new globalThis.window.CustomEvent("data-loaded", { "detail": "Data that may affect the DOM has been loaded. " }) : ""
+const DataLoadedEvent = (globalThis.window) ? new globalThis.window.CustomEvent("data-loaded", { "detail": "Data that may affect the DOM has been loaded. " }) : null
 
 export {FormatDateTimeAsString, FormatDurationAsString, DataLoadedEvent}

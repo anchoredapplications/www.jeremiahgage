@@ -46,16 +46,16 @@ function SinglePageNav(props) {
 }
 
 function navHighlighter() {
-    const sections = document.querySelectorAll("section[id]");
-    let scrollY = window.pageYOffset;
+    const sections = globalThis.document.querySelectorAll("section[id]");
+    let scrollY = globalThis.window.pageYOffset;
   
     sections.forEach(current => {
         const sectionHeight = current.parentElement.offsetHeight;
     
-        const sectionTop = current.getBoundingClientRect().top + window.pageYOffset - 150;
+        const sectionTop = current.getBoundingClientRect().top + globalThis.window.pageYOffset - 150;
         var sectionId = current.getAttribute("id");
         
-        var el = document.querySelector(".navigation a[href*=" + sectionId + "]")
+        var el = globalThis.document.querySelector(".navigation a[href*=" + sectionId + "]")
         if (
             scrollY > sectionTop &&
             scrollY <= sectionTop + sectionHeight
@@ -68,7 +68,7 @@ function navHighlighter() {
 }
 
 function alignFrontAndBackOfCards() {
-    var sections = document.querySelectorAll("section");
+    var sections = globalThis.document.querySelectorAll("section");
     const sectionArr = []
     sections.forEach(section => {
         section.setAttribute("style", ``)
