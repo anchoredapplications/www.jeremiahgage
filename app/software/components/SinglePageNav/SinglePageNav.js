@@ -4,10 +4,10 @@ import styles from './SinglePageNav.module.scss'
 function SinglePageNav(props) {
     // window.addEventListener("scroll", navHighlighter);
     // const [dropDownIsActive, setDropDownIsActive] = useState(false)
-    window.addEventListener('resize', () => {
+    globalThis.window.addEventListener('resize', () => {
         alignFrontAndBackOfCards();
     }, true);
-    document.addEventListener("data-loaded", function(e) {
+    globalThis.document.addEventListener("data-loaded", function(e) {
         alignFrontAndBackOfCards();
     });
       
