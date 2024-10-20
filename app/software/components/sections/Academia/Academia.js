@@ -50,7 +50,7 @@ function Academia(props) {
             heading="academia"
             demoPath="/repos/anchoredapplications/jeremiahgage/contents/src/software/components/sections/Academia/"
             footerPath="/blob/master/src/software/components/sections/Academia/Academia.js"
-            description={props.descriptions.experience}
+            description={props.descriptions.academia}
         >
             <div className={styles.academia}>
                 <AcademiaDescriptionPane 
