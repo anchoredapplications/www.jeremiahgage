@@ -79,4 +79,5 @@ const descriptions = {
     }
 }
 
-export default { descriptions };
+const data = { descriptions }
+export default data;
