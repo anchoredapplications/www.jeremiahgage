@@ -1,20 +1,20 @@
 const descriptions = {
     skills: {
-        front: "Here are the technical skills I've developed over my career.",
+        front: "Here are the technical skills I&#39;ve developed over my career.",
         back: (
             <>
-                The Skills section dynamically pulls data from GitHub's public API, utilizing the `fetch` API and `useEffect` for data retrieval. 
+                The Skills section dynamically pulls data from GitHub&#39;s public API, utilizing the `fetch` API and `useEffect` for data retrieval. 
                 Each skill is displayed using a responsive grid layout built with CSS Grid and styled-components for seamless integration into the overall design. 
                 This ensures that my skill set is always current, reflecting the latest technologies and frameworks I employ in my projects.
             </>
         )
     },
     projects: {
-        front: "Explore a selection of projects I've built, showcasing my expertise in software development.",
+        front: "Explore a selection of projects I&#39;ve built, showcasing my expertise in software development.",
         back: (
             <>
-                The Projects section interacts with GitHub's API to fetch detailed repository information using Axios for HTTP requests. 
-                The data is managed with React's state management hooks, including `useState` and `useReducer`, allowing for complex state logic while maintaining performance. 
+                The Projects section interacts with GitHub&#39;s API to fetch detailed repository information using Axios for HTTP requests. 
+                The data is managed with React&#39;s state management hooks, including `useState` and `useReducer`, allowing for complex state logic while maintaining performance. 
                 Each project entry includes descriptions, tech stacks, and links to live demos and source code, providing a comprehensive overview of my work and the methodologies applied.
             </>
         )
@@ -47,17 +47,17 @@ const descriptions = {
         )
     },
     experience: {
-        front: "Discover my professional journey in software engineering and the roles I've held.",
+        front: "Discover my professional journey in software engineering and the roles I&#39;ve held.",
         back: (
             <>
                 The Experience section draws from a personal API to highlight key positions and projects throughout my career. 
-                It utilizes `axios` for data fetching and React's context API for state management, allowing for a scalable architecture. 
+                It utilizes `axios` for data fetching and React&#39;s context API for state management, allowing for a scalable architecture. 
                 Each role includes detailed descriptions of the tech stacks I worked with, methodologies employed, and specific contributions to projects, showcasing my ability to adapt and excel in various environments.
             </>
         )
     },
     academia: {
-        front: "Learn about my educational background and the knowledge I've acquired.",
+        front: "Learn about my educational background and the knowledge I&#39;ve acquired.",
         back: (
             <>
                 The Academia section utilizes a personal API to provide a detailed overview of my academic achievements. 
@@ -67,7 +67,7 @@ const descriptions = {
         )
     },
     contact: {
-        front: "I'm always open to new opportunities and collaborations. Let's connect!",
+        front: "I&#39;m always open to new opportunities and collaborations. Let&#39;s connect!",
         back: (
             <>
                 The Contact section employs AWS Email Service for streamlined communication. 
@@ -79,4 +79,5 @@ const descriptions = {
     }
 }
 
-export default { descriptions };
+const data = { descriptions };
+export default data;
